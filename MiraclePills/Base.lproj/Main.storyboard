@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -97,26 +97,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbB-va-gfl">
-                                <rect key="frame" x="36" y="453" width="127" height="29"/>
+                                <rect key="frame" x="36" y="448" width="184" height="29"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="13"/>
-                                <state key="normal" title="Choose your state"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Choose your state             "/>
+                                <connections>
+                                    <action selector="btnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7C5-wc-pLM"/>
+                                </connections>
                             </button>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1p-Kx-CYX">
-                                <rect key="frame" x="28" y="485" width="320" height="100"/>
+                                <rect key="frame" x="28" y="480" width="320" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="x8F-ci-Mer"/>
+                                    <constraint firstAttribute="height" constant="120" id="x8F-ci-Mer"/>
                                 </constraints>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="AbB-va-gfl" firstAttribute="top" secondItem="6f8-av-Iah" secondAttribute="bottom" constant="5" id="1Me-4h-1lb"/>
                             <constraint firstItem="ciJ-yT-QZZ" firstAttribute="leading" secondItem="n5L-3t-fqY" secondAttribute="leading" id="4Uy-eZ-xMP"/>
                             <constraint firstItem="w1p-Kx-CYX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6xJ-nG-u5P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6yM-fL-MYa" secondAttribute="trailing" constant="134.5" id="8ZQ-o6-aWc"/>
                             <constraint firstItem="ciJ-yT-QZZ" firstAttribute="top" secondItem="n5L-3t-fqY" secondAttribute="bottom" constant="5" id="8eg-3d-TcB"/>
-                            <constraint firstItem="AbB-va-gfl" firstAttribute="top" secondItem="6f8-av-Iah" secondAttribute="bottom" constant="10" id="9C1-eU-m7X"/>
                             <constraint firstItem="wXS-To-16e" firstAttribute="top" secondItem="5cF-GU-4Ur" secondAttribute="bottom" constant="10" id="AFj-FD-RoE"/>
-                            <constraint firstItem="w1p-Kx-CYX" firstAttribute="top" secondItem="AbB-va-gfl" secondAttribute="bottom" constant="3" id="Af4-dU-t37"/>
                             <constraint firstItem="PUM-Ub-5Yb" firstAttribute="top" secondItem="6yM-fL-MYa" secondAttribute="bottom" constant="5" id="BBp-2d-0fF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wXS-To-16e" secondAttribute="trailing" constant="20" id="BOv-q1-bT1"/>
                             <constraint firstItem="0HO-pw-Jzy" firstAttribute="trailing" secondItem="wXS-To-16e" secondAttribute="trailing" id="GjQ-o9-AIW"/>
@@ -132,6 +135,7 @@
                             <constraint firstItem="5cF-GU-4Ur" firstAttribute="centerX" secondItem="6yM-fL-MYa" secondAttribute="centerX" id="ZZO-fX-5VN"/>
                             <constraint firstItem="EOF-3A-LcG" firstAttribute="top" secondItem="0HO-pw-Jzy" secondAttribute="bottom" constant="5" id="ai2-fZ-mCa"/>
                             <constraint firstItem="0HO-pw-Jzy" firstAttribute="leading" secondItem="wXS-To-16e" secondAttribute="leading" id="bz6-WH-d9f"/>
+                            <constraint firstItem="w1p-Kx-CYX" firstAttribute="top" secondItem="AbB-va-gfl" secondAttribute="bottom" constant="3" id="c00-ce-2uc"/>
                             <constraint firstItem="n5L-3t-fqY" firstAttribute="leading" secondItem="RF6-qv-nvZ" secondAttribute="leading" id="d0R-Q1-Xfd"/>
                             <constraint firstItem="EOF-3A-LcG" firstAttribute="leading" secondItem="0HO-pw-Jzy" secondAttribute="leading" id="ex5-kS-bAN"/>
                             <constraint firstItem="5cF-GU-4Ur" firstAttribute="top" secondItem="PUM-Ub-5Yb" secondAttribute="bottom" constant="10" id="hUg-1G-rfe"/>
@@ -152,6 +156,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cityField" destination="ciJ-yT-QZZ" id="43A-IZ-xCK"/>
+                        <outlet property="fullNameField" destination="EOF-3A-LcG" id="aQT-dU-hrC"/>
+                        <outlet property="pickerBtn" destination="AbB-va-gfl" id="Tfd-ZL-9an"/>
+                        <outlet property="statePicker" destination="w1p-Kx-CYX" id="UHT-dj-MoO"/>
+                        <outlet property="streetField" destination="RF6-qv-nvZ" id="agp-Ij-Jc5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
